@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_shop"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.didemkaraca.ecommerce.ShopFragment"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" />
+    <fragment
+        android:id="@+id/bagFragment"
+        android:name="com.didemkaraca.ecommerce.BagFragment"
+        android:label="fragment_bag"
+        tools:layout="@layout/fragment_bag" >
+        <action
+            android:id="@+id/action_bagFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.didemkaraca.ecommerce.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailBottomSheet"
+            app:destination="@id/productDetailBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.didemkaraca.ecommerce.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.didemkaraca.ecommerce.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" >
+        <action
+            android:id="@+id/action_successFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailBottomSheet"
+        android:name="com.didemkaraca.ecommerce.ProductDetailBottomSheet"
+        android:label="BookDetailBottomSheet"
+        tools:layout="@layout/product_detail">
+        <argument
+            android:name="productModel"
+            app:argType="com.didemkaraca.ecommerce.models.ProductModel" />
+        <action
+            android:id="@+id/action_productDetailBottomSheet_to_bag"
+            app:destination="@id/bag" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/favoriteFragment2"
+        android:name="com.didemkaraca.ecommerce.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+</navigation>

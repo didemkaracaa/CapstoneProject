@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "269288502112",
+    "project_id": "ecommerce-3bbb5",
+    "storage_bucket": "ecommerce-3bbb5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269288502112:android:d142784c381b3650bb2405",
+        "android_client_info": {
+          "package_name": "com.didemkaraca.ecommerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269288502112-ql5eqnnila6f83tjdbr882p4amjfjokq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGxkWOgfiWkUacr3zItooMpX9vD_H1Rg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269288502112-ql5eqnnila6f83tjdbr882p4amjfjokq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

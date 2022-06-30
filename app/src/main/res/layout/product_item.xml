@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="itemproduct"
+            type="com.didemkaraca.ecommerce.models.ProductModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="157dp"
+            android:layout_height="335dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#fb8c00"
+            android:clickable="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="7dp"
+            tools:ignore="MissingConstraints">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="156dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="215dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/productCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bad_script"
+                    android:text='@{itemproduct.category + " "}'
+                    android:textColor="#9B9B9B"
+                    android:textSize="11sp"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/productTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bad_script"
+                    android:text="@{itemproduct.title}"
+                    android:textSize="15sp"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/productPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bad_script"
+                    android:text='@{itemproduct.price + "$"}'
+                    android:textSize="14sp"
+                    android:textStyle="italic|bold" />
+
+
+
+                <ImageView
+                    android:id="@+id/bag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+
+
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/newLabelBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/productImage"
+                app:layout_constraintEnd_toStartOf="@+id/productImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/favoriveBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="185dp"
+                android:backgroundTint="#fb8c00"/>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

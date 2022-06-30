@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nnav_login"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/welcomeFragment2"
+        android:name="com.didemkaraca.e_commerceapplication.WelcomeFragment"
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment2_to_signinFragment2"
+            app:destination="@id/signinFragment2" />
+        <action
+            android:id="@+id/action_welcomeFragment2_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signinFragment2"
+        android:name="com.didemkaraca.ecommerce.SigninFragment"
+        android:label="SigninFragment" >
+        <action
+            android:id="@+id/action_signinFragment2_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+
+        <action
+            android:id="@+id/action_signinFragment2_to_mainActivity2"
+            app:destination="@id/mainActivity2" />
+        <action
+            android:id="@+id/action_signinFragment2_to_welcomeFragment2"
+            app:destination="@id/welcomeFragment2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment2_to_passwordFragment2"
+            app:destination="@id/passwordFragment2" />
+
+        <action
+            android:id="@+id/action_loginFragment2_to_mainActivity2"
+            app:destination="@id/mainActivity2" />
+        <action
+            android:id="@+id/action_loginFragment2_to_mainActivity22"
+            app:destination="@id/mainActivity2" />
+        <action
+            android:id="@+id/action_loginFragment2_to_signinFragment2"
+            app:destination="@id/signinFragment2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment2"
+        android:name="com.didemkaraca.ecommerce.PasswordFragment"
+        android:label="PasswordFragment" >
+        <action
+            android:id="@+id/action_passwordFragment2_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.didemkaraca.e_commerceapplication.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_welcomeFragment2"
+            app:destination="@id/welcomeFragment2" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.didemkaraca.ecommerce.MainActivity2"
+        android:label="activity_main2"
+        tools:layout="@layout/activity_main2" />
+</navigation>
